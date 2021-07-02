@@ -6,11 +6,24 @@ Created on Thu Jul  1 16:06:54 2021
 """
 
 import tkinter as tk
+import Analysis as ans
 
-class Board :
-    def __init__(self):
-        print("you made a board")
-        self.board = tk.Tk()
+class Board(tk.Frame):
+    def __init__(self, master=None):
+        super().__init__(master)
+        self.master = master
+        self.pack()
+        self.create_widgets()
+        
+        brain = ans.Analysis('bl')
+        
+    def create_widgets(self):
+        self.greeting = tk.Button(self)
+        self.greeting["text"] = "welcome to boarddd"
+        self.greeting.pack(side="top")
+    
+        
+        
         
     def update_board ():
         print("test")
@@ -23,12 +36,4 @@ class Board :
     def show_board():
         print("test")
         
-    def check_if_won():
-        print("test")
-        #if player has 3 in a row, display "you won"
-        #if cpu has 3 in a row, display "you lost
-        #(if make multiplayer) if player 2 won, display "(name) won" and vice versa
-   
-    def check_if_tie():
-        print("test")
-        #if all spaces taken, display "tie" message
+    
