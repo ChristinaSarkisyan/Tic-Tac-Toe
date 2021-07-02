@@ -8,7 +8,7 @@ Created on Thu Jul  1 16:06:54 2021
 from tkinter import *
 import Analysis as ans
 import numpy as np
-
+import Board_Minder as bm
 
 class Board():
     def __init__(self):
@@ -18,7 +18,7 @@ class Board():
         #make all the buttons
         for i in range(3):
             for j in range(3):
-                self.buttons.append(Button(root, text ="", padx=50, pady=50)) #add padding
+                self.buttons.append(Button(root, text ="", padx=50, pady=50)) 
         
         #make title
         self.title = Label(root, text = "Place your X", font =("arial", 15) , justify="center")
@@ -31,24 +31,12 @@ class Board():
         root.mainloop()
         
         
-        
-        #brain = ans.Analysis('bl')
-        
-    # def create_widgets(self):
-    #     for i in range(3):
-    #         for j in range(3):
-    #             self.buttons[i][j] = tk.Button(self)#, text ="testing", padx=50, pady=50)
-        
-    #     print("buttons after create widget\n", self.buttons, "\n\n") #temp testor
-    #     # self.buttonsButton(self)
-    #     # self.greeting["text"] = "welcome to boarddd"
-    #     #self.greeting.pack(side="top")
-        
-    #     for i in self.buttons:
-    #          i.pack()
-    
+        brain = ans.Analysis('bl')
         
         
+    # def player_click(i, j):
+    #     print("you clicked ", i, "", j)#temp testor
+             #Board.disable_buttons()
         
     # def update_board ():
     #     print("test")
@@ -62,5 +50,7 @@ class Board():
     #     print("test")
         
         
-    # def disable_buttons():
+    # def disable_buttons(self):
     #     print("buttons disabled")
+    #     for i in self.buttons:
+    #         i.state = DISABLED

@@ -8,21 +8,21 @@ import numpy as np
 
 class Analysis():
     def __init__(self, type_a): #type_a is either 'bl' or 'bu' for builder or blocker
-        board = np.zeros(shape = (3,3))
+        self.board = np.zeros(shape = (3,3))
         #log = <file here>
-        print("board:\n", board) #temp testor
+        print("board:\n", self.board) #temp testor
         if type_a == 'bl': self.blocker()
         elif type_a == 'bu': self.builder()
         
     def blocker(self):
         #algorythm based on blocking the oponent goes here
         print("you are running blocker")
-        print(self.end_check())
+        #print(self.end_check())
     
     def builder(self):
         #algorythm based on building lines of 3
         print("you are running builder")
-        print(self.end_check())
+        #print(self.end_check())
     
     def update_log():
         print("log has been updated")
@@ -44,9 +44,9 @@ class Analysis():
     def check_if_tie(self):
         print("test")
         opens = 0
-        for i in self.board:
-            if i != 0: opens +=1
+        # for i in self.board:
+        #     if i != 0: opens +=1
             
-        if opens == 0: return True
-        else: return False
+        # if opens == 0: return True
+        # else: return False
         #if all spaces taken, display "tie" message
