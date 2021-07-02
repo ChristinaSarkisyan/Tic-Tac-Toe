@@ -39,4 +39,6 @@ Created on Thu Jul  1 16:58:55 2021
 # root.mainloop()
 
 import Board as bd
-game = bd.Board()
+import Message as msg
+msg.Message()
+bd.Board()
